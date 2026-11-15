@@ -1,0 +1,96 @@
+{
+  "num_modalities": 3,
+  "modalities": [
+    "static",
+    "temporal",
+    "speech"
+  ],
+  "hidden_dim": 32,
+  "best_seed": 456,
+  "best_val_loss": 0.4549,
+  "seeds": [
+    {
+      "seed": 42,
+      "val_loss": 0.4583,
+      "epochs": 215,
+      "test_f1": 0.8468,
+      "test_precision": 0.746,
+      "test_recall": 0.9792,
+      "test_pr_auc": 0.9199
+    },
+    {
+      "seed": 123,
+      "val_loss": 0.4549,
+      "epochs": 234,
+      "test_f1": 0.8393,
+      "test_precision": 0.7344,
+      "test_recall": 0.9792,
+      "test_pr_auc": 0.9143
+    },
+    {
+      "seed": 456,
+      "val_loss": 0.4549,
+      "epochs": 250,
+      "test_f1": 0.8468,
+      "test_precision": 0.746,
+      "test_recall": 0.9792,
+      "test_pr_auc": 0.9214
+    },
+    {
+      "seed": 789,
+      "val_loss": 0.4569,
+      "epochs": 225,
+      "test_f1": 0.8468,
+      "test_precision": 0.746,
+      "test_recall": 0.9792,
+      "test_pr_auc": 0.9163
+    },
+    {
+      "seed": 2024,
+      "val_loss": 0.4558,
+      "epochs": 217,
+      "test_f1": 0.8364,
+      "test_precision": 0.7419,
+      "test_recall": 0.9583,
+      "test_pr_auc": 0.9191
+    }
+  ],
+  "class_mean_weights": {
+    "dance": {
+      "static": 0.1294,
+      "temporal": 0.7034,
+      "speech": 0.1672
+    },
+    "violence": {
+      "static": 0.1753,
+      "temporal": 0.755,
+      "speech": 0.0697
+    },
+    "adult_content": {
+      "static": 0.1803,
+      "temporal": 0.776,
+      "speech": 0.0437
+    },
+    "safe": {
+      "static": 0.117,
+      "temporal": 0.7902,
+      "speech": 0.0928
+    }
+  },
+  "mean_f1": 0.8432,
+  "std_f1": 0.0045,
+  "mean_pr_auc": 0.9182,
+  "std_pr_auc": 0.0026,
+  "thresholds": {
+    "t_lo": 0.409,
+    "t_hi": 0.694,
+    "val_review_rate": 0.1548,
+    "val_macro_f1": 0.8598
+  },
+  "stream_thresholds": {
+    "static": 0.5,
+    "temporal": 0.5,
+    "speech": 0.5,
+    "ocr": 0.5
+  }
+}

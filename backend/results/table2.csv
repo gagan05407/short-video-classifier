@@ -1,0 +1,5 @@
+Configuration,Precision,Recall,F1
+Full,0.746,0.979,0.847
+Without frames,0.77,0.979,0.862
+Without clip,0.647,0.917,0.759
+Without speech,0.733,0.917,0.815

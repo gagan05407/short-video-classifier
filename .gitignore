@@ -1,0 +1,33 @@
+# Python virtual environment
+venv/
+env/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node / Vite frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.eslintcache
+
+# Temporary uploads and logs
+backend/temp_uploads/*
+!backend/temp_uploads/.gitkeep
+*.log
+*.tmp
+
+# Large binary files (>100MB exceeds GitHub push limit)
+# Note: Place best_model.pth and nsfw_resnet18_small_state.pth in backend/weights/
+backend/weights/*.pth
+backend/weights/live/v*.pt
+
+# Large raw video datasets (>3GB total videos)
+backend/data/test_data/
+backend/data/speech_data/
+backend/data/corrupted_test/
+
+# OS specific files
+.DS_Store
+Thumbs.db

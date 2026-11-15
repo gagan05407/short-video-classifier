@@ -1,0 +1,5 @@
+Corruption,Fixed_Precision,Fixed_Recall,Fixed_F1,Proposed_Precision,Proposed_Recall,Proposed_F1
+Clean,0.662,0.938,0.776,0.746,0.979,0.847
+Blur,0.621,0.854,0.719,0.677,0.917,0.779
+Dark,0.671,0.979,0.797,0.708,0.958,0.814
+Noisy audio,0.662,0.938,0.776,0.746,0.979,0.847

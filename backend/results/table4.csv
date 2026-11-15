@@ -1,0 +1,5 @@
+Scenario,Precision,Recall,F1,Weight_Frames,Weight_Clip,Weight_Speech
+Full,0.746,0.979,0.847,0.15,0.756,0.093
+Drop frames,0.77,0.979,0.862,0.0,0.894,0.106
+Drop clip,0.647,0.917,0.759,0.814,0.0,0.186
+Drop speech,0.733,0.917,0.815,0.17,0.83,0.0

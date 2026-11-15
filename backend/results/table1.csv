@@ -1,0 +1,7 @@
+Method,Precision,Recall,F1,Note
+Frames only,0.623,0.896,0.735,
+Clip only,0.688,0.917,0.786,
+Speech only,0.737,0.292,0.418,
+OR,0.608,1.0,0.756,
+Fixed weights,0.662,0.938,0.776,
+Proposed gate,0.746,0.979,0.847,5-seed mean: 0.843 ± 0.008
