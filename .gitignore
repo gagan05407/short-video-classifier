@@ -27,6 +27,7 @@ backend/weights/live/v*.pt
 backend/data/test_data/
 backend/data/speech_data/
 backend/data/corrupted_test/
+TEST/
 
 # OS specific files
 .DS_Store
