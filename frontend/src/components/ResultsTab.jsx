@@ -11,7 +11,8 @@ function ResultsTab() {
     { id: 1, label: 'Table 1: Main Baselines' },
     { id: 2, label: 'Table 2: Ablation' },
     { id: 3, label: 'Table 3: Corruptions' },
-    { id: 5, label: 'Table 4: Selective Review' },
+    { id: 4, label: 'Table 4: Missing Modalities' },
+    { id: 5, label: 'Table 5: Selective Review' },
   ];
 
   useEffect(() => {
@@ -112,6 +113,9 @@ function ResultsTab() {
             ))}
           </tbody>
         </table>
+        <div className="table-footer-note">
+          When a modality is missing, the gate dynamically assigns it ~0% weight and shifts confidence to the remaining modalities.
+        </div>
       </div>
     );
   };
@@ -189,6 +193,9 @@ function ResultsTab() {
             ))}
           </tbody>
         </table>
+        <div className="table-footer-note">
+          When a modality is missing, the gate dynamically assigns it ~0% weight and shifts confidence to the remaining modalities.
+        </div>
       </div>
     );
   };
