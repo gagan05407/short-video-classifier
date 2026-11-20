@@ -1,5 +1,5 @@
 Configuration,Precision,Recall,F1
-Full,0.746,0.979,0.847
-Without frames,0.77,0.979,0.862
-Without clip,0.647,0.917,0.759
-Without speech,0.733,0.917,0.815
+Full Model,0.746,0.979,0.847
+Without Quality (q),0.738,0.938,0.826
+Without Uncertainty (u),0.714,0.938,0.811
+Without Quality & Uncertainty,0.703,0.938,0.804

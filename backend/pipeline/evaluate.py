@@ -95,26 +95,26 @@ def evaluate_table1(test_df: pd.DataFrame, frozen_gate: nn.Module):
 
 def evaluate_table2(test_df: pd.DataFrame, frozen_gate: nn.Module):
     """
-    Table 2: Modality ablation study.
+    Table 2: Feature ablation study (evaluating contributions of Quality q and Uncertainty u).
     """
     y_test = test_df["binary"].values.astype(int)
     X_test, M_test, P_test, _ = prepare_gate_tensors(test_df)
 
     scenarios = [
-        ("Full", [1, 1, 1]),
-        ("Without frames", [0, 1, 1]),
-        ("Without clip", [1, 0, 1]),
-        ("Without speech", [1, 1, 0]),
+        ("Full Model", None),
+        ("Without Quality (q)", [2, 5, 8]),
+        ("Without Uncertainty (u)", [1, 4, 7]),
+        ("Without Quality & Uncertainty", [1, 2, 4, 5, 7, 8]),
     ]
     rows = []
-    for name, mask_pattern in scenarios:
-        M_mod = M_test.clone()
-        for i in range(3):
-            if mask_pattern[i] == 0:
-                M_mod[:, i] = 0.0
+    for name, zero_indices in scenarios:
+        X_mod = X_test.clone()
+        if zero_indices is not None:
+            for idx in zero_indices:
+                X_mod[:, idx] = 0.0
 
         with torch.no_grad():
-            w = frozen_gate(X_test, mask=M_mod)
+            w = frozen_gate(X_mod, mask=M_test)
             score = compute_fused_score(w, P_test).numpy()
         pred = (score >= config.GATE_THRESHOLD).astype(int)
         m = compute_metrics(y_test, pred, score)

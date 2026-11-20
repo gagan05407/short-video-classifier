@@ -475,13 +475,13 @@ def create_deck():
              ])
 
     add_card(s12, Inches(6.8), Inches(1.6), Inches(5.7), Inches(2.5),
-             "Table 2: Ablation Study",
+             "Table 2: Feature Ablation Study",
              [
                  "Full Model: Precision 0.746 | Recall 0.979 | F1 0.847",
-                 "Without Quality (q): F1 drops to 0.824",
-                 "Without Uncertainty (u): F1 drops to 0.759 (critical feature!)",
-                 "Without Both (Predictions only): F1 drops to 0.815",
-                 "Proves that quality & uncertainty are vital for optimal gating."
+                 "Without Quality (q): F1 drops to 0.826 (Precision drops to 0.738)",
+                 "Without Uncertainty (u): F1 drops to 0.811 (Precision drops to 0.714)",
+                 "Without Both (Predictions only): F1 drops to 0.804",
+                 "Proves that quality indicators & entropy uncertainty are vital for gating."
              ])
 
     add_card(s12, Inches(0.8), Inches(4.3), Inches(3.7), Inches(2.5),
@@ -698,8 +698,13 @@ def create_deck():
     p.font.color.rgb = C_MUTED
 
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BTP_Final_Presentation.pptx")
-    prs.save(output_path)
-    print("Presentation saved successfully to:", output_path)
+    try:
+        prs.save(output_path)
+        print("Presentation saved successfully to:", output_path)
+    except PermissionError:
+        alt_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BTP_Final_Presentation_Updated.pptx")
+        prs.save(alt_path)
+        print(f"BTP_Final_Presentation.pptx was open in PowerPoint. Saved to: {alt_path}")
 
 if __name__ == "__main__":
     create_deck()

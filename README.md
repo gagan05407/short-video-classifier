@@ -201,9 +201,9 @@ Ablation analysis demonstrating the critical contribution of quality indicators 
 | Configuration | Precision | Recall | F1 Score |
 | :--- | :---: | :---: | :---: |
 | **Full Proposed Model** | **0.746** | **0.979** | **0.847** |
-| **Without Quality Indicators ($q$)** | 0.710 | 0.979 | 0.824 |
-| **Without Prediction Uncertainty ($u$)** | 0.647 | 0.917 | 0.759 |
-| **Without Quality & Uncertainty** (Predictions only) | 0.733 | 0.917 | 0.815 |
+| **Without Quality Indicators ($q$)** | 0.738 | 0.938 | 0.826 |
+| **Without Prediction Uncertainty ($u$)** | 0.714 | 0.938 | 0.811 |
+| **Without Quality & Uncertainty** (Predictions only) | 0.703 | 0.938 | 0.804 |
 
 ### Table 3: Robustness under Physical Corruptions
 Comparison of Fixed Weights vs. the Proposed Adaptive Reliability Gate under real-world degradation:
